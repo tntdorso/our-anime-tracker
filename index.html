@@ -182,6 +182,39 @@
     .toast{position:fixed;bottom:25px;right:25px;background:#574359;color:white;padding:12px 17px;border-radius:13px;box-shadow:0 10px 30px #3f293c32;font-size:12px;opacity:0;transform:translateY(14px);pointer-events:none;z-index:20;transition:opacity .25s,transform .25s}
     .toast.visible{opacity:1;transform:translateY(0)}
 
+
+    /* Miriam's dedicated anime corner. Intentional first-class placement, not a hidden sidebar widget. */
+    .miriam-feature{position:relative;margin:22px 0 24px;padding:0;overflow:hidden;border:1px solid #efc5dc;border-radius:26px;background:linear-gradient(112deg,#ffe9f2 0%,#fff6f9 48%,#f2e9ff 100%);box-shadow:0 17px 42px #a6639540;scroll-margin-top:18px}
+    .miriam-feature:before{content:'✿';position:absolute;right:12px;top:42px;font-size:130px;line-height:1;color:#e8b1d3;opacity:.14;pointer-events:none;transform:rotate(24deg)}
+    .miriam-feature-head{position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 29px 17px}
+    .miriam-feature-eyebrow{font-size:10px;letter-spacing:.13em;font-weight:700;color:#ac668a;text-transform:uppercase;margin-bottom:6px}
+    .miriam-feature-head h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(25px,3.2vw,36px);line-height:1.12;color:#6f3a67;font-weight:400;margin:0 0 5px}
+    .miriam-feature-head h2 span{color:#e96da4;font-family:'Poppins',sans-serif;font-size:.76em}
+    .miriam-feature-head p{font-size:12px;color:#8c6582;margin:0}
+    .miriam-feature-ornament{display:flex;align-items:center;gap:8px;color:#dc78a6;font-size:32px;white-space:nowrap;filter:drop-shadow(0 4px 4px #f2c7dd);animation:flowerBreath 4.5s ease-in-out infinite}
+    .miriam-feature-ornament span:nth-child(2){font-size:45px;color:#eb84b3}
+    .miriam-feature-ornament span:last-child{font-size:27px;color:#b78acb}
+    .miriam-feature-body{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:0 29px 26px}
+    .miriam-feature-panel{min-width:0;padding:16px 19px 14px;background:#fffaffea;border-radius:18px;border:1px solid #f1dbe7;box-shadow:0 4px 12px #b56c9b16}
+    .miriam-feature-subtitle{color:#a2527e;font-size:13px;font-weight:700;letter-spacing:.01em;margin-bottom:5px}
+    .miriam-feature .corner-label{font-size:11px;margin:9px 0 7px}
+    .miriam-feature .corner-select{height:39px}
+    .miriam-feature .corner-rating-row{margin-top:14px}
+    .miriam-feature .corner-hearts{min-height:44px;gap:12px}
+    .miriam-feature .corner-hearts button{font-size:34px;cursor:pointer}
+    .miriam-feature .corner-fav-label{font-size:11px;margin:13px 0 0}
+    .miriam-feature .corner-notes{min-height:103px;padding:12px;font-size:12px}
+    .miriam-feature .corner-saved{font-size:10px;margin-top:9px}
+    .miriam-quick-link{display:inline-flex;gap:8px;align-items:center;margin-top:16px;background:#fff7fbcf;color:#9b4576;text-decoration:none;font-size:11px;font-weight:700;border:1px solid #e9b8d4;padding:9px 14px;border-radius:999px;box-shadow:0 5px 15px #7a415c20;transition:transform .2s,background .2s}
+    .miriam-quick-link:hover,.miriam-quick-link:focus-visible{transform:translateY(-2px);background:white}
+    body[data-theme="night"] .miriam-feature{border-color:#79507b;background:linear-gradient(120deg,#4d345c,#332640 55%,#43335a);box-shadow:0 15px 35px #140d2260}
+    body[data-theme="night"] .miriam-feature-head h2{color:#ffe6f3}
+    body[data-theme="night"] .miriam-feature-head p,body[data-theme="night"] .miriam-feature-eyebrow{color:#ebc5df}
+    body[data-theme="night"] .miriam-feature-panel{background:#32263fd9;border-color:#765477}
+    body[data-theme="night"] .miriam-feature-subtitle,body[data-theme="night"] .miriam-feature .corner-label{color:#f4c1dc}
+    body[data-theme="night"] .miriam-quick-link{background:#4b3456;color:#ffe0f0;border-color:#9c6b91}
+    @media(max-width:700px){.miriam-feature-head{padding:19px 18px 14px}.miriam-feature-body{grid-template-columns:1fr;padding:0 16px 18px;gap:12px}.miriam-feature-panel{padding:15px}.miriam-feature-ornament{font-size:21px;gap:4px}.miriam-feature-ornament span:nth-child(2){font-size:27px}.miriam-feature-ornament span:last-child{font-size:19px}.miriam-feature-head h2{font-size:27px}.miriam-feature-head p{font-size:11px}}
+
     @media(max-width:1200px){.discovery-grid{grid-template-columns:1fr}}
     @media(max-width:1120px){.main-grid{grid-template-columns:minmax(0,1fr) 290px}.section{padding:21px}.sidebar-content{padding:15px}.anime-title-cell{min-width:165px}}
     @media(max-width:900px){.main-grid{grid-template-columns:1fr}.sidebar{order:-1}.sidebar-summary{padding:17px 20px}.sidebar-content{display:grid;grid-template-columns:1fr 1fr;gap:18px}.sidebar-divider{display:none}.shelf-quote{grid-column:1/-1;margin:0}.hero{padding:28px;grid-template-columns:1fr .7fr}.note-card p{font-size:19px}.stats{grid-template-columns:repeat(4,1fr)}}
@@ -306,6 +339,7 @@
         <div class="tiny-label">Our anime journey together</div>
         <h1>Our Anime<br><em>Tracker.</em></h1>
         <p class="subtitle">The shows we've picked, the episodes we've watched, and what comes next.</p>
+        <a class="miriam-quick-link" href="#miriams-corner">♡ Visit Miriam’s Corner <span aria-hidden="true">↘</span></a>
       </div>
       <div class="hero-aside">
         <figure class="mascot-scene" aria-label="Chibi Travis with a curly man bun, glasses, and a full beard, and chibi Miriam with curly hair, together under cherry blossoms with a cat">
@@ -323,6 +357,34 @@
       <div class="stat"><div class="stat-label">Currently watching</div><div class="stat-number" id="watchingCount">0</div></div>
       <div class="stat"><div class="stat-label">Completed</div><div class="stat-number" id="completedCount">0</div></div>
       <div class="stat progress-stat"><div class="stat-label">Series finished</div><div class="stat-number" id="progressPercent">0%</div><div class="statbar" aria-hidden="true"><div id="progressBar"></div></div></div>
+    </section>
+
+    <!-- Miriam's Corner: a first-class section, never hidden inside the collapsible shelf. -->
+    <section class="miriam-feature surface" id="miriams-corner" aria-labelledby="miriamCornerHeading">
+      <div class="miriam-feature-head">
+        <div>
+          <div class="miriam-feature-eyebrow">✿ A little space just for her ✿</div>
+          <h2 id="miriamCornerHeading">Miriam’s Anime Corner <span aria-hidden="true">♡</span></h2>
+          <p>Her favorites, her ratings, and the moments worth remembering.</p>
+        </div>
+        <div class="miriam-feature-ornament" aria-hidden="true"><span>✧</span><span>♥</span><span>✿</span></div>
+      </div>
+      <div class="miriam-feature-body">
+        <div class="miriam-feature-panel">
+          <div class="miriam-feature-subtitle">♡ Her anime picks</div>
+          <label class="corner-label" for="cornerAnime">Choose an anime</label>
+          <select id="cornerAnime" class="control corner-select" aria-label="Anime to rate"></select>
+          <div class="corner-rating-row"><span class="corner-label">Miriam's rating</span><span class="corner-rating-caption" id="ratingCaption">Not rated yet</span></div>
+          <div id="cornerHearts" class="corner-hearts" role="group" aria-label="Rate selected anime from one to five hearts"></div>
+          <label class="corner-fav-label"><input type="checkbox" id="cornerFavorite"><span>♡ Save to Miriam's favorites</span></label>
+        </div>
+        <div class="miriam-feature-panel">
+          <div class="miriam-feature-subtitle">✎ Her thoughts</div>
+          <label class="corner-label" for="cornerThoughts">What did Miriam think?</label>
+          <textarea id="cornerThoughts" class="form-input corner-notes" rows="4" maxlength="300" placeholder="The fights, the characters, the ending... what stayed with her?"></textarea>
+          <div class="corner-saved" id="cornerSaved" aria-live="polite">Saved in this browser</div>
+        </div>
+      </div>
     </section>
 
     <div class="main-grid">
@@ -369,18 +431,6 @@
         <div class="sidebar-content">
           <section aria-labelledby="watchingHeading"><div class="aside-label" id="watchingHeading">Currently watching <span class="count" id="watchingAsideCount">0</span></div><div class="watching-stack" id="watchingSidebar"></div></section>
           <div class="sidebar-divider" aria-hidden="true"></div>
-          <section class="miriam-corner" aria-labelledby="miriamCornerHeading">
-            <div class="aside-label" id="miriamCornerHeading">♡ Miriam’s Anime Corner <span class="corner-sparkle" aria-hidden="true">✧</span></div>
-            <p class="corner-intro">Her favorites, ratings, and little notes from our watch nights.</p>
-            <label class="corner-label" for="cornerAnime">Choose a show</label>
-            <select id="cornerAnime" class="control corner-select" aria-label="Anime to rate"></select>
-            <div class="corner-rating-row"><span class="corner-label">Miriam's rating</span><span class="corner-rating-caption" id="ratingCaption">Not rated yet</span></div>
-            <div id="cornerHearts" class="corner-hearts" role="group" aria-label="Rate selected anime from one to five hearts"></div>
-            <label class="corner-fav-label"><input type="checkbox" id="cornerFavorite"><span>♡ One of Miriam's favorites</span></label>
-            <label class="corner-label" for="cornerThoughts">Miriam's thoughts</label>
-            <textarea id="cornerThoughts" class="form-input corner-notes" rows="3" maxlength="300" placeholder="What did she think of it?"></textarea>
-            <div class="corner-saved" id="cornerSaved" aria-live="polite">Saved in this browser</div>
-          </section>
           <div class="sidebar-divider" aria-hidden="true"></div>
           <section aria-labelledby="wishlistHeading"><div class="aside-label" id="wishlistHeading">Up next / Wishlist <span class="count" id="wishlistAsideCount">7</span></div><div class="wishlist-list" id="wishlistSidebar"></div></section>
           <div class="shelf-quote">Pick the next one together. The order can always change.</div>
